@@ -1,18 +1,35 @@
-import express from "express";
+import Express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import mongoose from "mongoose";  
 import * as dotenv from 'dotenv';
+import { mongoUrl } from "./Config/config.js";
 dotenv.config();
 
-const app = express();
+const app = Express();
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
 
 app.use(cors({ credentials: true, origin:"http://localhost:3000"}));
 
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+mongoose.connect(
+  mongoUrl,
+  {
+    useNewUrlParser: true,
+    useUnifiedtopology: true,
+  },
+  (err) => {
+    if (!err) {
+      console.log("Database Connected");
+    } else {
+      console.log("error", err);
+    }
+  }
+);
 
 app.listen(PORT, () => {
     console.log(`server listening at port ${PORT}`);
