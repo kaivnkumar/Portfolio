@@ -4,6 +4,8 @@ import cors from "cors";
 import mongoose from "mongoose";  
 import * as dotenv from 'dotenv';
 import { mongoUrl } from "./Config/config.js";
+import routes from "./Routes/Routes.js";
+
 dotenv.config();
 
 const app = Express();
@@ -15,6 +17,8 @@ app.use(cors({ credentials: true, origin:"http://localhost:3000"}));
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/api", routes);
 
 mongoose.connect(
   mongoUrl,
