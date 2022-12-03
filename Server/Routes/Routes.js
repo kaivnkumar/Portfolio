@@ -3,6 +3,7 @@ import multer from "multer";
 import { getPersonalData } from "../Controllers/GetPersonalData.js";
 import { personalData } from "../Controllers/PersonalData.js";
 import { AddImages } from "../Controllers/Images.js";
+import { getImage } from "../Controllers/GetImage.js";
 
 const Route = express.Router();
 
@@ -25,5 +26,6 @@ const Upload = multer({
 Route.post("/personalDetail", personalData);
 Route.get("/getpersonalDetail", getPersonalData);
 Route.post("/uploadImage", Upload.single("images"), AddImages);
+Route.get("/getImage", getImage);
 
 export default Route;
