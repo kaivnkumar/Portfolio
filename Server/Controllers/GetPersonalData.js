@@ -7,7 +7,7 @@ export const getPersonalData = (req, res) => {
     } else {
       return res.send({
         status: 200,
-        message: "events found",
+        message: "Data found",
         data: data,
       });
     }
