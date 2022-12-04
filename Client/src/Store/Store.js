@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import infoReducer from "./Slice/getPersonalDetail";
+import pictureReducers from "./Slice/getImage";
 
 const rootReducer = combineReducers({
-  personalInfo: infoReducer
+  personalInfo: infoReducer,
+  image: pictureReducers
   
 });
 
