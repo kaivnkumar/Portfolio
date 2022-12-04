@@ -1,8 +1,9 @@
-import { ImgSchema } from "../Schema/ImageSchema.js";
+import { GradeAndCerModel } from "../Schema/GradeAndCer.js";
 import fs from "fs";
 
-export const AddImages = async (req, res) => {
-    const UploadingImage = new ImgSchema({
+export const GradeAndCer = async (req, res) => {
+    const UploadingImage = new GradeAndCerModel({
+        Score: req.body.Score,
         profilePic: {
             data: fs.readFileSync("profile/" + req.file.filename),
             contentType: "image/png",
@@ -14,7 +15,7 @@ export const AddImages = async (req, res) => {
         }
         res.send({
             status: 200,
-            message: "Image is added",
+            message: "Data is added",
             data: data,
         });
     });
