@@ -10,6 +10,9 @@ const GradeAndCerSchema = new mongoose.Schema(
       data: Buffer,
       contentType: String
     },
+    GradeId: {
+      type : String,
+    }
   },
   { timestamps: true }
 );

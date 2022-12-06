@@ -6,6 +6,7 @@ import { AddImages } from "../Controllers/Images.js";
 import { getImage } from "../Controllers/GetImage.js";
 import { GradeAndCer } from "../Controllers/GradeAndCer.js";
 import { getGradeAndCer } from "../Controllers/GetGradeAndCer.js";
+import { GetCertificate } from "../Controllers/GetCertificate.js";
 
 const Route = express.Router();
 
@@ -46,5 +47,6 @@ Route.post("/uploadImage", Upload.single("images"), AddImages);
 Route.get("/getImage", getImage);
 Route.post("/gradeandcer", GradeCerUpload.single("images"),GradeAndCer);
 Route.get("/getgradeandcer", getGradeAndCer);
+Route.get("/getcertificate", GetCertificate);
 
 export default Route;

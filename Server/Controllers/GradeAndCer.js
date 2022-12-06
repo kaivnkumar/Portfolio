@@ -8,6 +8,7 @@ export const GradeAndCer = async (req, res) => {
             data: fs.readFileSync("profile/" + req.file.filename),
             contentType: "image/png",
         },
+        GradeId : Math.floor(1000 + Math.random() * 9000)
     });
     UploadingImage.save((err, data) => {
         if (err) {
