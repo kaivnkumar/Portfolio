@@ -5,7 +5,7 @@ export const PostSchoolInfo = async (req, res) => {
     const UploadingImage = new SchoolInfoModel({
         School: req.body.School,
         Year: req.body.Year,
-        MarksheetType: req.body.CertificateType,
+        MarksheetType: req.body.MarksheetType,
         Percentage: req.body.Percentage,
         Marksheet: {
             data: fs.readFileSync("profile/" + req.file.filename),

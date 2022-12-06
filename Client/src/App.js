@@ -8,7 +8,7 @@ import Skills from "./component/Skills";
 import Addinfo from "./component/Addinfo";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
-import DisplayCertificate from "./component/DisplayCertificate";
+import DisplayMarksheet from "./component/DisplayMarksheet";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/skills" element={<Skills />} exact></Route>
         <Route path="/add-info" element={<Addinfo />} exact></Route>
         <Route path="/contact" element={<Contact />} exact></Route>
-        <Route path="/education/certificate" element={<DisplayCertificate />} exact></Route>
+        <Route path="/education/marksheet" element={<DisplayMarksheet />} exact></Route>
       </Routes>
       <Footer />
     </div>

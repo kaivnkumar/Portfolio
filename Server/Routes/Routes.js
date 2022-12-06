@@ -43,8 +43,8 @@ const MarksheetUpload = multer({
 
 Route.post("/personalDetail", PersonalData);
 Route.get("/getpersonalDetail", GetPersonalData);
-Route.post("/uploadImage", Upload.single("images"), AddImages);
-Route.get("/getImage", GetImage);
+Route.post("/uploadimage", Upload.single("images"), AddImages);
+Route.get("/getimage", GetImage);
 Route.post("/postschoolinfo", MarksheetUpload.single("marksheet"),PostSchoolInfo);
 Route.get("/getschoolinfo", GetSchoolInfo);
 Route.get("/getmarksheet", GetMarksheetById);

@@ -1,19 +1,21 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { getCertificate } from "../Store/Slice/getCertificate";
+import { getMarksheet } from "../Store/Slice/getMarkSheet";
 
-function DisplayCertificate() {
+function DisplayMarksheet() {
 
     const dispatch = useDispatch();
 
-    const { Certificate, dataLoading } = useSelector((state) => state.certificateImage);
+    const { Marksheet, dataLoading } = useSelector((state) =>{ 
+      console.log(state.MarksheetImage.Marksheet);
+      return state.MarksheetImage});
 
     return (
         <div className='bg-black'>
             {
-            Certificate?.length > 0 && Certificate.map((obj) => {
+            Marksheet?.length > 0 && Marksheet.map((obj) => {
               const base64String = btoa(
-                new Uint8Array(obj?.profilePic?.data?.data)
+                new Uint8Array(obj?.Marksheet?.data?.data)
                   .reduce((data, byte) => data + String.fromCharCode(byte), '')
               )
               return (
@@ -31,4 +33,4 @@ function DisplayCertificate() {
     )
 }
 
-export default DisplayCertificate
+export default DisplayMarksheet

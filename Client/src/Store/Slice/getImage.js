@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { axio } from "../../Config/Config.js";
 
 export const getImage = createAsyncThunk("Picture", async () => {
-  return axio.get(`/api/getImage`);
+  return axio.get(`/api/getimage`);
 });
 
 const pictureReducers = createSlice({
