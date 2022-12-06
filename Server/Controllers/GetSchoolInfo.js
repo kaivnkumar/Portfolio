@@ -1,7 +1,7 @@
-import { GradeAndCerModel } from "../Schema/GradeAndCer.js";
+import { SchoolInfoModel } from "../Schema/SchoolInfoSchema.js";
 
-export const getGradeAndCer = (req, res) => {
-    GradeAndCerModel.find((err, data) => {
+export const GetSchoolInfo = (req, res) => {
+  SchoolInfoModel.find((err, data) => {
     if (err) {
       console.log(err);
     } else {

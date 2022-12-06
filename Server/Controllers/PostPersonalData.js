@@ -1,6 +1,6 @@
 import { personalDetailModel } from "../Schema/PersonalDetails.js";
 
-export const personalData = async (req, res) => {
+export const PersonalData = async (req, res) => {
     const personalData = new personalDetailModel({
         Firstname: req.body.Firstname,
         Lastname: req.body.Lastname,

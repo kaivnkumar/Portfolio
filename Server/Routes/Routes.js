@@ -1,12 +1,12 @@
 import express from "express";
 import multer from "multer";
-import { getPersonalData } from "../Controllers/GetPersonalData.js";
-import { personalData } from "../Controllers/PersonalData.js";
+import { GetPersonalData } from "../Controllers/GetPersonalData.js";
+import { PersonalData } from "../Controllers/PostPersonalData.js";
 import { AddImages } from "../Controllers/Images.js";
-import { getImage } from "../Controllers/GetImage.js";
-import { GradeAndCer } from "../Controllers/GradeAndCer.js";
-import { getGradeAndCer } from "../Controllers/GetGradeAndCer.js";
-import { GetCertificate } from "../Controllers/GetCertificate.js";
+import { GetImage } from "../Controllers/GetImage.js";
+import { PostSchoolInfo } from "../Controllers/PostSchoolInfo.js";
+import { GetSchoolInfo } from "../Controllers/GetSchoolInfo.js";
+import { GetMarksheetById } from "../Controllers/GetMarksheetById.js";
 
 const Route = express.Router();
 
@@ -34,19 +34,19 @@ const CerStorages = multer.diskStorage({
     },
 });
 
-const GradeCerUpload = multer({
+const MarksheetUpload = multer({
     storage: CerStorages,
     limits: {
         fileSize: 90000000,
     },
 });
 
-Route.post("/personalDetail", personalData);
-Route.get("/getpersonalDetail", getPersonalData);
+Route.post("/personalDetail", PersonalData);
+Route.get("/getpersonalDetail", GetPersonalData);
 Route.post("/uploadImage", Upload.single("images"), AddImages);
-Route.get("/getImage", getImage);
-Route.post("/gradeandcer", GradeCerUpload.single("images"),GradeAndCer);
-Route.get("/getgradeandcer", getGradeAndCer);
-Route.get("/getcertificate", GetCertificate);
+Route.get("/getImage", GetImage);
+Route.post("/postschoolinfo", MarksheetUpload.single("marksheet"),PostSchoolInfo);
+Route.get("/getschoolinfo", GetSchoolInfo);
+Route.get("/getmarksheet", GetMarksheetById);
 
 export default Route;

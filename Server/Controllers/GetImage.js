@@ -1,6 +1,6 @@
 import { ImgSchema } from "../Schema/ImageSchema.js";
 
-export const getImage = (req, res) => {
+export const GetImage = (req, res) => {
     ImgSchema.find((err, data) => {
         if (err) {
             res.send({

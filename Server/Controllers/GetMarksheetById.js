@@ -1,14 +1,14 @@
-import { GradeAndCerModel } from "../Schema/GradeAndCer.js";
+import { SchoolInfoModel } from "../Schema/SchoolInfoSchema.js";
 
-export const GetCertificate = (req, res) => {
-  GradeAndCerModel.find({ GradeId: req.query.GradeId }, (err, data) => {
+export const GetMarksheetById = (req, res) => {
+  SchoolInfoModel.find({ MarksheetId: req.query.MarksheetId }, (err, data) => {
     if (err) {
       console.log(err);
     } else {
       if (data.length) {
         return res.send({
           status: 200,
-          message: "Certificate found",
+          message: "Marksheet found",
           data: data,
         });
       } else {
