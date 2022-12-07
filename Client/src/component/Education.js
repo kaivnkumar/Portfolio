@@ -32,8 +32,8 @@ function Education() {
       {
         SchoolData?.length > 0 && SchoolData.map((obj) => (
           <div key={obj._id} onClick={(e) => handleMarksheetPage(e)} className='text-red-200 mb-[60px]'>
-                <p className='font-extrabold'>{obj.MarksheetType}</p>
-                <p>{obj.Year}</p>
+            <p className='font-extrabold'>{obj.MarksheetType}</p>
+            <p>{obj.Year}</p>
             <p className='font-bold text-lg'>{obj.School}</p>
             <div className='flex'>
               <p className='cursor-pointer' id={obj.MarksheetId}>Percentage : {obj.Percentage} %</p>
