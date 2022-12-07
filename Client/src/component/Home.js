@@ -21,20 +21,20 @@ function Home() {
       <div className='flex'>
         <div className='bg-black text-red-200 w-1/2 text-center'>
           <div>
-          {
-            personalData?.length > 0 && personalData.map((data) => (
-              <div className='mt-[30%]' key={data._id}>
-                <p className='decoration-orange-900n font-semibold text-5xl italic p-8'>MERN STACK DEVELOPER</p>
-                <p className='text-2xl font-bold'>{data.FirstName} {data.LastName}</p>
-              </div>
-            ))
-          }
-           </div>
-           <div className='mt-[20px]'>
+            {
+              personalData?.length > 0 && personalData.map((data) => (
+                <div className='mt-[30%]' key={data._id}>
+                  <p className='decoration-orange-900n font-semibold text-5xl italic p-8'>MERN STACK DEVELOPER</p>
+                  <p className='text-2xl font-bold'>{data.FirstName} {data.LastName}</p>
+                </div>
+              ))
+            }
+          </div>
+          <div className='mt-[20px]'>
             <Link to="/about">
               <button className='text-gray-500'>About Me</button>
             </Link>
-           </div>
+          </div>
         </div>
         <div className='bg-black w-1/2'>
           {
