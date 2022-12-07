@@ -20,6 +20,7 @@ function Navbar() {
         <div className="flex sm:gap-[10px]">
           <div className="pt-[43px] pb-[22px] text-[16px] text-[#adadbb] md:pr-[30px] md:text-[14px] sm:text-[10px]">
             <ul className="flex gap-[30px] md:gap-[27px] sm:gap-[20px]">
+              <Link to="/about">About</Link>
               <Link to="/education">Education</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/skills">Skills</Link>
