@@ -2,10 +2,18 @@ import { personalDetailModel } from "../Schema/PersonalDetails.js";
 
 export const PersonalData = async (req, res) => {
     const personalData = new personalDetailModel({
-        Firstname: req.body.Firstname,
-        Lastname: req.body.Lastname,
+        FirstName: req.body.FirstName,
+        LastName: req.body.LastName,
+        DateOfBirth: req.body.DateOfBirth,
+        Age: req.body.Age,
+        City: req.body.City,
+        Degree: req.body.Degree,
+        Major: req.body.Major,
         Email: req.body.Email,
         PhoneNumber: req.body.PhoneNumber,
+        IntroDescription: req.body.IntroDescription,
+        InterDescription: req.body.InterDescription,
+        ProjectDescription: req.body.ProjectDescription,
     });
     personalData.save((err, data) => {
         if (err) {
@@ -13,7 +21,7 @@ export const PersonalData = async (req, res) => {
         }
         res.send({
             status: 200,
-            message: "Posted successfully",
+            message: "Details Added successfully",
             data: data
         })
     });

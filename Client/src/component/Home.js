@@ -21,10 +21,21 @@ function Home() {
         <div className='bg-black text-red-200 w-1/2 text-center'>
           {
             personalData?.length > 0 && personalData.map((data) => (
-              <div className='mt-[250px]' key={data._id}>
+              <div className='mt-[180px]' key={data._id}>
                 <p className='decoration-orange-900n font-semibold text-5xl italic p-8'>MERN STACK DEVELOPER</p>
-                <p className='text-2xl font-bold'>{data.Firstname} {data.Lastname}</p>
-                <p></p>
+                <p className='text-2xl font-bold'>{data.FirstName} {data.LastName}</p>
+                <div className='text-left'>
+                  <p>{data.DateOfBirth}</p>
+                  <p>{data.Age}</p>
+                  <p>+91 {data.PhoneNumber}</p>
+                  <p>{data.Email}</p>
+                  <p>{data.City}</p>
+                  <p>{data.Degree}</p>
+                  <p>{data.Major}</p>
+                </div>
+                <p>{data.IntroDescription}</p>
+                <p>{data.InterDescription}</p>
+                <p>{data.ProjectDescription}</p>
               </div>
             ))
           }

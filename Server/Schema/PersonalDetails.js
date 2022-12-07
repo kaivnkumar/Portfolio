@@ -2,11 +2,31 @@ import mongoose from "mongoose";
 
 const personalDetailSchema = new mongoose.Schema(
   {
-    Firstname: {
+    FirstName: {
       type: String,
       required: true,
     },
-    Lastname: {
+    LastName: {
+      type: String,
+      required: true,
+    },
+    DateOfBirth: {
+      type: String,
+      required: true,
+    },
+    Age: {
+      type: String,
+      required: true,
+    },
+    City: {
+      type: String,
+      required: true,
+    }, 
+    Degree: {
+      type: String,
+      required: true,
+    },
+    Major: {
       type: String,
       required: true,
     },
@@ -16,6 +36,18 @@ const personalDetailSchema = new mongoose.Schema(
     },
     PhoneNumber: {
       type: Number,
+      required: true,
+    },
+    IntroDescription: {
+      type: String,
+      required: true,
+    },
+    InterDescription: {
+      type: String,
+      required: true,
+    },
+    ProjectDescription: {
+      type: String,
       required: true,
     },
   },
