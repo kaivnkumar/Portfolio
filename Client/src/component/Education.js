@@ -28,10 +28,10 @@ function Education() {
   }
 
   return (
-    <div>
+    <div className='bg-black'>
       {
         SchoolData?.length > 0 && SchoolData.map((obj) => (
-          <div key={obj._id} onClick={(e) => handleMarksheetPage(e)} className='flex justify-center'>
+          <div key={obj._id} onClick={(e) => handleMarksheetPage(e)} className='text-red-200'>
             <p>{obj.School}</p>
             <p>{obj.Year}</p>
             <p>{obj.MarksheetType}</p>
