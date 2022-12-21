@@ -9,6 +9,7 @@ import { GetSchoolInfo } from "../Controllers/GetSchoolInfo.js";
 import { GetMarksheetById } from "../Controllers/GetMarksheetById.js";
 import { ContactInfo } from "../Controllers/PostContactInfo.js";
 import { GetContactInfo } from "../Controllers/GetContactInfo.js";
+import { Suggestions } from "../Controllers/PostSuggestion.js";
 
 const Route = express.Router();
 
@@ -52,6 +53,7 @@ Route.get("/getschoolinfo", GetSchoolInfo);
 Route.get("/getmarksheet", GetMarksheetById);
 Route.post("/contactinfo", ContactInfo);
 Route.get("/getcontactinfo", GetContactInfo);
+Route.post("/postsuggestion", Suggestions);
 
 
 export default Route;
