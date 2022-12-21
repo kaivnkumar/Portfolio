@@ -3,12 +3,14 @@ import infoReducer from "./Slice/getPersonalDetail";
 import pictureReducers from "./Slice/getImage";
 import SchoolInfoReducer from "./Slice/getSchoolInfo";
 import MarksheetReducers from "./Slice/getMarkSheet";
+import contactReducers from "./Slice/getContactInfo";
 
 const rootReducer = combineReducers({
   personalInfo: infoReducer,
   image: pictureReducers,
   SchoolInfo: SchoolInfoReducer,
-  MarksheetImage: MarksheetReducers
+  MarksheetImage: MarksheetReducers,
+  contactInfo: contactReducers
 });
 
 const store = configureStore({

@@ -11,7 +11,7 @@ function DisplayMarksheet() {
       return state.MarksheetImage});
 
     return (
-        <div className='bg-black'>
+        <div className='bg-black min-h-screen'>
             {
             Marksheet?.length > 0 && Marksheet.map((obj) => {
               const base64String = btoa(
