@@ -7,6 +7,8 @@ import { GetImage } from "../Controllers/GetImage.js";
 import { PostSchoolInfo } from "../Controllers/PostSchoolInfo.js";
 import { GetSchoolInfo } from "../Controllers/GetSchoolInfo.js";
 import { GetMarksheetById } from "../Controllers/GetMarksheetById.js";
+import { ContactInfo } from "../Controllers/PostContactInfo.js";
+import { GetContactInfo } from "../Controllers/GetContactInfo.js";
 
 const Route = express.Router();
 
@@ -48,5 +50,8 @@ Route.get("/getimage", GetImage);
 Route.post("/postschoolinfo", MarksheetUpload.single("marksheet"),PostSchoolInfo);
 Route.get("/getschoolinfo", GetSchoolInfo);
 Route.get("/getmarksheet", GetMarksheetById);
+Route.post("/contactinfo", ContactInfo);
+Route.get("/getcontactinfo", GetContactInfo);
+
 
 export default Route;
