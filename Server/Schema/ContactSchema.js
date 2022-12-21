@@ -5,7 +5,7 @@ const contactSchema = new mongoose.Schema(
     Linkedin: {
       type: String,
       required: true,
-    }, 
+    },
     Twitter: {
       type: String,
       required: true,
@@ -23,8 +23,8 @@ const contactSchema = new mongoose.Schema(
       required: true,
     },
     MobileNumber: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
     Email: {
       type: String,
