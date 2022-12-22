@@ -11,7 +11,7 @@ function About() {
         dispatch(getpersonalDetail());
     }, []);
 
-    const { personalData, dataLoading } = useSelector((state) => state.personalInfo);
+    const { personalData } = useSelector((state) => state.personalInfo);
 
     const Navigate = useNavigate();
     const handelProjectPage = () => {

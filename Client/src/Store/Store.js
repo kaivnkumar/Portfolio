@@ -5,6 +5,7 @@ import SchoolInfoReducer from "./Slice/getSchoolInfo";
 import MarksheetReducers from "./Slice/getMarkSheet";
 import contactReducers from "./Slice/getContactInfo";
 import suggestionReducer from "./Slice/postSuggestions";
+import CollegeInfoReducer from "./Slice/getCollegeInfo";
 
 const rootReducer = combineReducers({
   personalInfo: infoReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   SchoolInfo: SchoolInfoReducer,
   MarksheetImage: MarksheetReducers,
   contactInfo: contactReducers,
-  suggestionsData: suggestionReducer
+  suggestionsData: suggestionReducer,
+  CollegeInfo: CollegeInfoReducer
 });
 
 const store = configureStore({
