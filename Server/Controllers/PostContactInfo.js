@@ -18,7 +18,6 @@ export const ContactInfo = async (req, res) => {
         res.send({
             status: 200,
             message: "Contact Info Added successfully",
-            data: data
         })
     });
 }
