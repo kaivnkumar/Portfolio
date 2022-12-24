@@ -12,6 +12,8 @@ import { GetContactInfo } from "../Controllers/GetContactInfo.js";
 import { Suggestions } from "../Controllers/PostSuggestion.js";
 import { CollegeData } from "../Controllers/PostCollegeInfo.js";
 import { GetCollegeData } from "../Controllers/GetCollegeInfo.js";
+import { SkillDetail } from "../Controllers/PostSkillDetails.js";
+import { GetSkillDetails } from "../Controllers/GetSkillDetails.js";
 
 const Route = express.Router();
 
@@ -58,6 +60,7 @@ Route.get("/getcontactinfo", GetContactInfo);
 Route.post("/postsuggestion", Suggestions);
 Route.post("/postcollegeinfo", CollegeData);
 Route.get("/collegeinfo", GetCollegeData);
-
+Route.post("/postskill", SkillDetail);
+Route.get("/getskill", GetSkillDetails);
 
 export default Route;
