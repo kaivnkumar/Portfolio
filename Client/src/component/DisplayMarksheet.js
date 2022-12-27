@@ -1,18 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { getMarksheet } from "../Store/Slice/getMarkSheet";
+import { useSelector } from "react-redux";
 
 function DisplayMarksheet() {
 
-  const dispatch = useDispatch();
-
   const { Marksheet } = useSelector((state) => {
-    console.log(state.MarksheetImage.Marksheet);
     return state.MarksheetImage
   });
 
   return (
-    <div className='bg-black min-h-screen'>
+    <div className='bg-sky-50 pt-[90px] min-h-screen'>
       {
         Marksheet?.length > 0 && Marksheet.map((obj) => {
           const base64String = btoa(

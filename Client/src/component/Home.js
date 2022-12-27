@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getImage } from '../Store/Slice/getImage';
-import { getpersonalDetail } from '../Store/Slice/getPersonalDetail';
+import { getPersonalDetail } from '../Store/Slice/getPersonalDetail';
 import loader from './Image/loading.gif';
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getpersonalDetail());
+    dispatch(getPersonalDetail());
     dispatch(getImage());
   }, []);
 
@@ -20,32 +20,34 @@ function Home() {
   return (
     <>
       {
-        ImageLoading && <div className='bg-black h-screen items-center'>
-          <img className='h-[300px] w-[350px] ml-[40%]' src={loader}></img>
+        ImageLoading && <div className='min-h-screen items-center flex justify-center bg-sky-50'>
+          <img className='h-[150px] w-[120px]' src={loader} alt=''></img>
         </div>
       }
       {
         ImageLoading === false && (
           <div>
-            <div className='flex'>
-              <div className='bg-black h-screen text-red-200 w-1/2 text-center'>
+            <div className='bg-contain bg-no-repeat bg-fixed bg-homeBg bg-sky-50 h-screen w-full opacity-95'>
+            </div>
+            <div className='flex mt-[100px] bg-sky-50'>
+              <div className='text-red-400 w-1/2 text-center'>
                 <div>
                   {
                     personalData?.length > 0 && personalData.map((data) => (
                       <div className='mt-[30%]' key={data._id}>
                         <p className='decoration-orange-900n font-semibold font-marker text-5xl italic p-8'>MERN STACK DEVELOPER</p>
-                        <p className='text-2xl font-bold font-marker'>{data.FirstName} {data.LastName}</p>
+                        <p className='text-2xl font-bold'>{data.FirstName} {data.LastName}</p>
                       </div>
                     ))
                   }
                 </div>
                 <div className='mt-[20px]'>
                   <Link to="/about">
-                    <button className='text-gray-500 font-marker'>About Me</button>
+                    <button className='text-gray-500'>About Me</button>
                   </Link>
                 </div>
               </div>
-              <div className='bg-black w-1/2'>
+              <div className='w-1/2'>
                 {
                   Image?.length > 0 && Image.map((img) => {
                     const base64String = btoa(

@@ -47,22 +47,36 @@ function Contact() {
   };
 
   return (
-    <div className='min-h-screen'>
-      <div>
+    <div className='bg-sky-50 min-h-screen'>
+      <div className='pt-[90px]'>
         {
           contactDetails?.length > 0 && contactDetails.map((data) => {
             const preDefinedText = data.WAPredefinedText;
             const uri = encodeURI(preDefinedText);
             return (
               <div key={data._id}>
-                <div className='flex gap-10 bg-white justify-center align-bottom'>
-                  <a href={"https://www.linkedin.com/in/" + data.Linkedin}><img src={Linkedin} alt='' className='h-[50px] w-[50px]'></img></a>
-                  <a href={"https://twitter.com/" + data.Twitter}><img src={Twitter} alt='' className='h-[50px] w-[50px]'></img></a>
-                  <a href={"https://www.instagram.com/" + data.Instagram}><img src={Instagram} alt='' className='h-[50px] w-[50px]'></img></a>
-                  <a href={"https://www.facebook.com/" + data.FaceBook}><img src={Facebook} alt='' className='h-[50px] w-[50px]'></img></a>
-                  <a href={"https://wa.me/91" + data.WhatsAppNumber + "?text=" + uri}><img src={Whatsapp} alt='' className='h-[50px] w-[50px]'></img></a>
-                  <a href={"mailto:" + data.Email}><img src={Email} alt='' className='h-[50px] w-[50px]'></img></a>
-                  <a href={"tel:" + data.MobileNumber}><img src={Phone} alt='' className='h-[50px] w-[50px]'></img></a>
+                <div className='flex gap-10 justify-center'>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"https://www.linkedin.com/in/" + data.Linkedin}><img src={Linkedin} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"https://twitter.com/" + data.Twitter}><img src={Twitter} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"https://www.instagram.com/" + data.Instagram}><img src={Instagram} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"https://www.facebook.com/" + data.FaceBook}><img src={Facebook} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"https://wa.me/91" + data.WhatsAppNumber + "?text=" + uri}><img src={Whatsapp} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"mailto:" + data.Email}><img src={Email} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
+                  <div className='h-[100px] w-[100px] bg-white border-[5px] border-blue-500 rounded-full p-[19px]'>
+                    <a href={"tel:" + data.MobileNumber}><img src={Phone} alt='' className='h-[50px] w-[50px]'></img></a>
+                  </div>
                 </div>
               </div>
             )

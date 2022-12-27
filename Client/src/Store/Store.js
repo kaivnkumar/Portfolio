@@ -6,6 +6,7 @@ import MarksheetReducers from "./Slice/getMarkSheet";
 import contactReducers from "./Slice/getContactInfo";
 import suggestionReducer from "./Slice/postSuggestions";
 import CollegeInfoReducer from "./Slice/getCollegeInfo";
+import ProgLangReducers from "./Slice/getProgLang";
 
 const rootReducer = combineReducers({
   personalInfo: infoReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   MarksheetImage: MarksheetReducers,
   contactInfo: contactReducers,
   suggestionsData: suggestionReducer,
-  CollegeInfo: CollegeInfoReducer
+  CollegeInfo: CollegeInfoReducer,
+  ProgramingInfo: ProgLangReducers
 });
 
 const store = configureStore({

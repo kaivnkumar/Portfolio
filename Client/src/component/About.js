@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getpersonalDetail } from '../Store/Slice/getPersonalDetail';
+import { getPersonalDetail } from '../Store/Slice/getPersonalDetail';
 
 function About() {
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getpersonalDetail());
+        dispatch(getPersonalDetail());
     }, []);
 
     const { personalData } = useSelector((state) => state.personalInfo);
@@ -20,10 +20,10 @@ function About() {
 
     return (
         <div>
-            <div className='flex bg-black h-screen text-red-200 justify-center'>
+            <div className='flex bg-sky-50 min-h-screen justify-center'>
                 {
                     personalData?.length > 0 && personalData.map((data) => (
-                        <div className='mt-[50px] leading-[40px]' key={data._id}>
+                        <div className='pt-[90px] leading-[40px] sm:text-sm' key={data._id}>
                             <div className='flex'>
                                 <div className='w-[120px]'>
                                     <p>Full Name</p>
@@ -59,7 +59,7 @@ function About() {
                             <div className='mt-[50px] w-[850px]'>
                                 <p>{data.IntroDescription}</p>
                                 <p>{data.InterDescription}</p>
-                                <p className='cursor-pointer' onClick={handelProjectPage}>{data.ProjectDescription}</p>
+                                <p className='cursor-pointer underline' onClick={handelProjectPage}>{data.ProjectDescription}</p>
                             </div>
                         </div>
                     ))

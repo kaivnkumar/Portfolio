@@ -7,24 +7,24 @@ function Navbar() {
     Navigate("/");
   };
   return (
-    <div className="bg-black h-16">
-      <div className="justify-between items-center h-[72px] shadow-header_box flex pl-[147px] md:pl-[36px] sm:h-[36px] sm:pl-[17px] ">
+    <div className="h-16 w-full bg-gradient-to-r from-violet-500 via-slate-400 to-stone-300 fixed overflow-hidden">
+      <div className="justify-between items-center shadow-header_box h-[72px] flex pl-[80px] pr-[40px] md:pl-[36px] sm:h-[36px] sm:pl-[12px]">
         <div className="flex items-center justify-center sm:pt-[4px]">
           <div
             onClick={handelHomePage}
-            className="flex gap-2 cursor-pointer font-bold text-[24.69px] mt-4 md:text-[20px] sm:text-[12px] sm:gap-1">
-            <p className=" text-[#bebabd]">Kavin 's</p>
-            <p className=" text-[#747485]">Intro</p>
+            className="flex gap-2 cursor-pointer font-bold text-[24px] mt-4 md:text-[20px] sm:text-[12px] sm:gap-[2px]">
+            <p className=" text-[#535052]">Kavin 's</p>
+            <p className=" text-[#e8aaaa]">Intro</p>
           </div>
         </div>
-        <div className="flex sm:gap-[10px]">
-          <div className="pt-[43px] pb-[22px] text-[16px] text-[#adadbb] md:pr-[30px] md:text-[14px] sm:text-[10px]">
-            <ul className="flex gap-[30px] md:gap-[27px] sm:gap-[20px]">
+        <div>
+          <div className="pt-[43px] pb-[22px] text-[17px] text-gray-700 font-semibold md:pr-[30px] md:text-[14px] 
+          sm:text-[10px] sm:font-semibold">
+            <ul className="flex gap-[30px] md:gap-[27px] sm:gap-[10px]">
               <Link to="/about">About</Link>
               <Link to="/education">Education</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/skills">Skills</Link>
-              <Link to="/add-info">Additional Info</Link>
               <Link to="/contact">Contact</Link>
             </ul>
           </div>
