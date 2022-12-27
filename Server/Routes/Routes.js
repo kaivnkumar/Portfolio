@@ -12,8 +12,8 @@ import { GetContactInfo } from "../Controllers/GetContactInfo.js";
 import { Suggestions } from "../Controllers/PostSuggestion.js";
 import { CollegeData } from "../Controllers/PostCollegeInfo.js";
 import { GetCollegeData } from "../Controllers/GetCollegeInfo.js";
-import { SkillDetail } from "../Controllers/PostSkillDetails.js";
-import { GetSkillDetails } from "../Controllers/GetSkillDetails.js";
+import { ProgLangs } from "../Controllers/PostProgLang.js";
+import { GetProgLang } from "../Controllers/GetProgLang.js";
 
 const Route = express.Router();
 
@@ -40,7 +40,6 @@ const CerStorages = multer.diskStorage({
         cb(null, file.originalname);
     },
 });
-
 const MarksheetUpload = multer({
     storage: CerStorages,
     limits: {
@@ -48,8 +47,8 @@ const MarksheetUpload = multer({
     },
 });
 
-Route.post("/personalDetail", PersonalData);
-Route.get("/getpersonalDetail", GetPersonalData);
+Route.post("/personaldetail", PersonalData);
+Route.get("/getpersonaldetail", GetPersonalData);
 Route.post("/uploadimage", Upload.single("images"), AddImages);
 Route.get("/getimage", GetImage);
 Route.post("/postschoolinfo", MarksheetUpload.single("marksheet"), PostSchoolInfo);
@@ -60,7 +59,7 @@ Route.get("/getcontactinfo", GetContactInfo);
 Route.post("/postsuggestion", Suggestions);
 Route.post("/postcollegeinfo", CollegeData);
 Route.get("/collegeinfo", GetCollegeData);
-Route.post("/postskill", SkillDetail);
-Route.get("/getskill", GetSkillDetails);
+Route.post("/postlanguage", ProgLangs);
+Route.get("/getlanguages", GetProgLang);
 
 export default Route;

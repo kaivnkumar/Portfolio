@@ -23,7 +23,7 @@ const SchoolInfoSchema = new mongoose.Schema(
       contentType: String
     },
     MarksheetId: {
-      type : String,
+      type: String,
     }
   },
   { timestamps: true }
