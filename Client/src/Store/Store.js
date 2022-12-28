@@ -8,6 +8,7 @@ import suggestionReducer from "./Slice/postSuggestions";
 import CollegeInfoReducer from "./Slice/getCollegeInfo";
 import ProgLangReducers from "./Slice/getProgLang";
 import DevSkillReducers from "./Slice/getDevSkills";
+import ProjectsReducers from "./Slice/getProjects";
 
 const rootReducer = combineReducers({
   personalInfo: infoReducer,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   suggestionsData: suggestionReducer,
   CollegeInfo: CollegeInfoReducer,
   ProgramingInfo: ProgLangReducers,
-  DevSkillInfo: DevSkillReducers
+  DevSkillInfo: DevSkillReducers,
+  ProjectInfo: ProjectsReducers
 });
 
 const store = configureStore({

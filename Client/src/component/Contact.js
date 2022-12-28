@@ -21,6 +21,7 @@ function Contact() {
   const { contactDetails } = useSelector((state) => state.contactInfo);
   const { Suggestions } = useSelector((state) => state.suggestionsData);
   const [SuggestionsStatus, setSuggestionsStatus] = useState({ status: 0, message: "" })
+
   useEffect(() => {
     if (Suggestions?.data?.response == "success") {
       setSuggestionsStatus({
