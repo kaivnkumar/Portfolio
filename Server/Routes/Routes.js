@@ -16,6 +16,8 @@ import { ProgLangs } from "../Controllers/PostProgLang.js";
 import { GetProgLang } from "../Controllers/GetProgLang.js";
 import { DevSkills } from "../Controllers/PostDevSkills.js";
 import { GetDevSkills } from "../Controllers/GetDevSkills.js";
+import { Projects } from "../Controllers/PostProjects.js";
+import { GetProjects } from "../Controllers/GetProjects.js";
 
 const Route = express.Router();
 
@@ -65,5 +67,7 @@ Route.post("/postlanguage", ProgLangs);
 Route.get("/getlanguages", GetProgLang);
 Route.post("/postdevskill", DevSkills);
 Route.get("/getdevskill", GetDevSkills);
+Route.post("/postprojects", Projects);
+Route.get("/getprojects", GetProjects);
 
 export default Route;
