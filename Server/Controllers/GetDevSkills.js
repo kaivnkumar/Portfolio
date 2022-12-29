@@ -1,7 +1,7 @@
-import { personalDetailModel } from "../Schema/PersonalDetails.js";
+import { DevSkillModel } from "../Schema/DevSkillsSchema.js";
 
-export const GetPersonalData = (req, res) => {
-  personalDetailModel.find((err, data) => {
+export const GetDevSkills = (req, res) => {
+  DevSkillModel.find((err, data) => {
     if (err) {
       console.log(err);
     } else {

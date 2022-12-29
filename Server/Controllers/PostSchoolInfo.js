@@ -11,7 +11,7 @@ export const PostSchoolInfo = async (req, res) => {
             data: fs.readFileSync("profile/" + req.file.filename),
             contentType: "image/png",
         },
-        MarksheetId : Math.floor(1000 + Math.random() * 9000)
+        MarksheetId: Math.floor(1000 + Math.random() * 9000)
     });
     UploadingImage.save((err, data) => {
         if (err) {
@@ -20,7 +20,6 @@ export const PostSchoolInfo = async (req, res) => {
         res.send({
             status: 200,
             message: "Data is added",
-            data: data,
         });
     });
 };

@@ -1,7 +1,7 @@
-import { personalDetailModel } from "../Schema/PersonalDetails.js";
+import { ProgLangModel } from "../Schema/ProgLangSchema.js";
 
-export const GetPersonalData = (req, res) => {
-  personalDetailModel.find((err, data) => {
+export const GetProgLang = (req, res) => {
+  ProgLangModel.find((err, data) => {
     if (err) {
       console.log(err);
     } else {

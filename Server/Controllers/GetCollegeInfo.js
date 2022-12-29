@@ -1,7 +1,7 @@
-import { personalDetailModel } from "../Schema/PersonalDetails.js";
+import { CollegeInfoModel } from "../Schema/CollegeSchema.js";
 
-export const GetPersonalData = (req, res) => {
-  personalDetailModel.find((err, data) => {
+export const GetCollegeData = (req, res) => {
+  CollegeInfoModel.find((err, data) => {
     if (err) {
       console.log(err);
     } else {

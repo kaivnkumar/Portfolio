@@ -21,7 +21,7 @@ const personalDetailSchema = new mongoose.Schema(
     City: {
       type: String,
       required: true,
-    }, 
+    },
     Degree: {
       type: String,
       required: true,
