@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <div className="bg-gradient-to-r from-sky-100 via-neutral-200 to-gray-200 h-[120px] sm:h-[137px]">
+      <div className="bg-gradient-to-r from-sky-100 via-neutral-200 to-gray-200 w-fit h-[120px] sm:h-[137px]">
         <div className="pt-[15px] pl-[100px] pr-[100px] divide-y-2 divide-[#D9D9D9B2]">
           <p className="w-[194px] text-[20px] font-bold pb-[15px]">
             Portfolio

@@ -12,14 +12,14 @@ function Navbar() {
         <div className="flex items-center justify-center sm:pt-[4px]">
           <div
             onClick={handelHomePage}
-            className="flex gap-2 cursor-pointer font-bold text-[24px] mt-4 md:text-[20px] sm:text-[12px] sm:gap-[2px]">
+            className="flex gap-2 cursor-pointer font-bold text-[24px] mt-4 md:text-[20px] sm:text-[16px] sm:gap-[2px]">
             <p className=" text-[#535052]">Kavin 's</p>
             <p className=" text-[#e8aaaa]">Intro</p>
           </div>
         </div>
         <div>
           <div className="pt-[43px] pb-[22px] text-[17px] text-gray-700 font-semibold md:pr-[30px] md:text-[14px] 
-          sm:text-[10px] sm:font-semibold">
+          sm:text-[14px] sm:font-bold">
             <ul className="flex gap-[30px] md:gap-[27px] sm:gap-[10px]">
               <Link to="/about">About</Link>
               <Link to="/education">Education</Link>
