@@ -19,13 +19,13 @@ function About() {
     };
 
     return (
-        <div className='w-[100%]'>
-            <div className='flex bg-sky-50 min-h-screen w-[100%] justify-center sm:justify-start'>
+        <div>
+            <div className='flex bg-sky-50 min-h-screen w-screen justify-center'>
                 {
                     personalData?.length > 0 && personalData.map((data) => (
-                        <div className='pt-[90px] leading-[40px] sm:text-[14px]' key={data._id}>
+                        <div className='pt-[90px] leading-[40px] sm:text-[13px] sm:pl-4 sm:leading-[30px]' key={data._id}>
                             <div className='flex'>
-                                <div className='w-[120px] sm:w-[100px]'>
+                                <div className='w-[120px] sm:w-[95px]'>
                                     <p>Full Name</p>
                                     <p>Date Of Birth</p>
                                     <p>Age</p>
@@ -56,7 +56,7 @@ function About() {
                                     <p>{data.Major}</p>
                                 </div>
                             </div>
-                            <div className='mt-[50px] w-[850px] sm:w-[500px]'>
+                            <div className='mt-[50px] w-[850px] sm:w-fit'>
                                 <p>{data.IntroDescription}</p>
                                 <p>{data.InterDescription}</p>
                                 <p className='cursor-pointer underline' onClick={handelProjectPage}>{data.ProjectDescription}</p>
