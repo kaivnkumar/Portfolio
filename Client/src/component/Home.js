@@ -20,17 +20,17 @@ function Home() {
   return (
     <>
       {
-        ImageLoading && <div className='min-h-screen items-center flex justify-center bg-sky-50'>
+        ImageLoading && <div className='min-h-screen items-center flex justify-center bg-black'>
           <img className='h-[150px] w-[120px]' src={loader} alt=''></img>
         </div>
       }
       {
         ImageLoading === false && (
           <div>
-            <div className='bg-contain bg-no-repeat bg-fixed bg-homeBg bg-sky-50 h-screen w-full opacity-95'>
+            <div className='bg-contain bg-no-repeat bg-fixed bg-homeBg bg-black h-screen w-full opacity-95'>
             </div>
-            <div className='flex mt-[100px] bg-sky-50'>
-              <div className='text-red-400 w-1/2 text-center'>
+            <div className='flex mt-[100px] bg-black'>
+              <div className='text-red-200 w-1/2 text-center'>
                 <div>
                   {
                     personalData?.length > 0 && personalData.map((data) => (

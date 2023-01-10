@@ -20,12 +20,12 @@ function About() {
 
     return (
         <div>
-            <div className='flex bg-sky-50 min-h-screen w-screen justify-center'>
+            <div className='flex bg-black text-red-200 min-h-screen justify-center'>
                 {
                     personalData?.length > 0 && personalData.map((data) => (
-                        <div className='pt-[90px] leading-[40px] sm:text-[13px] sm:pl-4 sm:leading-[30px]' key={data._id}>
-                            <div className='flex'>
-                                <div className='w-[120px] sm:w-[95px]'>
+                        <div className='pt-[90px] leading-[40px] text-[16px] sm:text-[13px] sm:pl-4 sm:leading-[30px]' key={data._id}>
+                            <div className='flex gap-12'>
+                                <div>
                                     <p>Full Name</p>
                                     <p>Date Of Birth</p>
                                     <p>Age</p>
@@ -45,7 +45,7 @@ function About() {
                                     <p>:</p>
                                     <p>:</p>
                                 </div>
-                                <div className='ml-[20px] sm:ml-[5px]'>
+                                <div>
                                     <p>{data.FirstName} {data.LastName}</p>
                                     <p>{data.DateOfBirth}</p>
                                     <p>{data.Age}</p>

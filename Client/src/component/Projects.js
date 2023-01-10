@@ -13,7 +13,7 @@ function Projects() {
   const { Projects } = useSelector((state) => state.ProjectInfo);
 
   return (
-    <div className='bg-sky-50 min-h-screen pt-[90px]'>
+    <div className='bg-black text-red-200 min-h-screen pt-[90px]'>
       {
         Projects?.length > 0 && Projects.map((data) => (
           <div key={data._id}>

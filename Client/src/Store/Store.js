@@ -6,8 +6,7 @@ import MarksheetReducers from "./Slice/getMarkSheet";
 import contactReducers from "./Slice/getContactInfo";
 import suggestionReducer from "./Slice/postSuggestions";
 import CollegeInfoReducer from "./Slice/getCollegeInfo";
-import ProgLangReducers from "./Slice/getProgLang";
-import DevSkillReducers from "./Slice/getDevSkills";
+import SkillReducers from "./Slice/getSkills";
 import ProjectsReducers from "./Slice/getProjects";
 
 const rootReducer = combineReducers({
@@ -18,8 +17,7 @@ const rootReducer = combineReducers({
   contactInfo: contactReducers,
   suggestionsData: suggestionReducer,
   CollegeInfo: CollegeInfoReducer,
-  ProgramingInfo: ProgLangReducers,
-  DevSkillInfo: DevSkillReducers,
+  TechnicalSkill: SkillReducers,
   ProjectInfo: ProjectsReducers
 });
 
