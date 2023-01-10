@@ -1,7 +1,7 @@
-import { DevSkillModel } from "../Schema/DevSkillsSchema.js";
+import { SkillModel } from "../Schema/SkillsSchema.js";
 
-export const GetDevSkills = (req, res) => {
-  DevSkillModel.find((err, data) => {
+export const GetSkills = (req, res) => {
+  SkillModel.find((err, data) => {
     if (err) {
       console.log(err);
     } else {
