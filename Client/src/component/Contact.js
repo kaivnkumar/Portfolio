@@ -9,6 +9,7 @@ import Facebook from "./Image/facebook.gif";
 import Email from "./Image/mail.gif";
 import Phone from "./Image/phone-ring.gif";
 import { postSuggestions } from '../Store/Slice/postSuggestions';
+import '../index.css'
 
 function Contact() {
 
@@ -49,46 +50,71 @@ function Contact() {
 
   return (
     <div className='bg-black text-red-200 min-h-screen pt-[90px]'>
-      <div className='flex justify-center mb-20'>
+      <div className='ml-[10%] mb-5'>
+        <h1 className='text-2xl font-bold sm:text-lg sm:font-semibold'>Contact Details</h1>
+      </div>
+      <div className='flex justify-center gap-[150px] mb-20 sm:flex-col sm:gap-10'>
+        <div className='sm:ml-5'>
+          <div className='mb-2 sm:ml-5'>
+            <h1 className='text-xl font-bold mb-3 sm:text-lg sm:font-semibold sm:mb-1'>Address :</h1>
+            <div className='text-lg font-semibold pl-4 sm:text-sm sm:font-medium'>
+              <p>Si.No:32,33,</p>
+              <p>Sri Andal Nagar,</p>
+              <p>Mahalingapuram Post,</p>
+              <p>Pollachi</p>
+              <p>Tamilnadu-642002</p>
+            </div>
+          </div>
+          <div className='text-lg font-semibold sm:pl-4 sm:text-sm sm:font-medium'>
+            <p>Email : kavinkumarmsakthivel@gmail.com</p>
+            <p>Phone : +91 9994815599</p>
+          </div>
+        </div>
         <form onSubmit={handleSuggestions}>
-          <div className='grid gap-8'>
-            <div className='flex gap-6'>
-              <div className='grid gap-6'>
-                <p>Name</p>
-                <p>Phone</p>
-                <p>Email</p>
-                <p>Suggestion</p>
+          <div className='grid gap-6'>
+            <div>
+              <div className="flex justify-center items-center bg-black">
+                <label className='relative cursor-pointer'>
+                  <input type="text" placeholder="Input" required className='h-10 w-[350px] px-6 text-xl text-white bg-black border-white border-2 rounded-lg border-opacity-50 outline-none 
+                  focus:border-red-400 placeholder-gray-300 placeholder-opacity-0 transition duration-200 sm:w-[250px] sm:h-8 sm:text-lg' />
+                  <span className='text-xl text-red-200 text-opacity-80 bg-black absolute left-5 top-1 px-1 transition duration-200 input-text sm:text-sm'>Name</span>
+                </label>
               </div>
-              <div className='grid gap-6'>
-                <div>
-                  <input
-                    className='bg-black border-b-2 border-red-400 w-[300px] pl-3'
-                    placeholder='Your name*' type="text" required></input>
-                </div>
-                <div>
-                  <input
-                    className='bg-black border-b-2 border-red-400 w-[300px] pl-3'
-                    placeholder='Your Mobile Number   (optional)' type="tel" pattern="[0-9]{10}"></input>
-                </div>
-                <div>
-                  <input
-                    className='bg-black border-b-2 border-red-400 w-[300px] px-3'
-                    placeholder='Your Email   (optional)' type="email"></input>
-                </div>
-                <div>
-                  <textarea
-                    className='bg-black border-b-2 border-red-400 w-[300px] pl-3'
-                    placeholder='Give your suggestions*' rows="1" cols="100" required></textarea>
-                </div>
+            </div>
+            <div>
+              <div className="flex justify-center items-center bg-black">
+                <label className='relative cursor-pointer'>
+                  <input type="tel" pattern="[0-9]{10}" placeholder="Input" className='h-10 w-[350px] px-6 text-xl text-white bg-black border-white border-2 rounded-lg border-opacity-50 outline-none 
+                  focus:border-red-400 placeholder-gray-300 placeholder-opacity-0 transition duration-200 sm:w-[250px] sm:h-8 sm:text-lg' />
+                  <span className='text-xl text-red-200 text-opacity-80 bg-black absolute left-5 top-1 px-1 transition duration-200 input-text sm:text-sm'>Mobile Number</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-center items-center bg-black">
+                <label className='relative cursor-pointer'>
+                  <input type="email" placeholder="Input" className='h-10 w-[350px] px-6 text-xl text-white bg-black border-white border-2 rounded-lg border-opacity-50 outline-none 
+                  focus:border-red-400 placeholder-gray-300 placeholder-opacity-0 transition duration-200 sm:w-[250px] sm:h-8 sm:text-lg' />
+                  <span className='text-xl text-red-200 text-opacity-80 bg-black absolute left-5 top-1 px-1 transition duration-200 input-text sm:text-sm'>Email</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-center items-center bg-black">
+                <label className='relative cursor-pointer'>
+                  <textarea type="text" required placeholder="Input" rows="1" cols="100" className='h-10 w-[350px] px-6 text-xl text-white bg-black border-white border-2 rounded-lg border-opacity-50 outline-none 
+                  focus:border-red-400 placeholder-gray-300 placeholder-opacity-0 transition duration-200 sm:w-[250px] sm:h-8 sm:text-lg' />
+                  <span className='text-xl text-red-200 text-opacity-80 bg-black absolute left-5 top-1 px-1 transition duration-200 input-text sm:text-sm'>Suggestions</span>
+                </label>
               </div>
             </div>
             <div className='flex-row grid justify-center gap-4'>
               <div className='flex justify-center'>
-                <button className='bg-red-900 py-2 px-3 rounded-lg'>SUBMIT</button>
+                <button className='bg-red-900 py-2 px-3 rounded-lg sm:py-1 sm:px-2'>SUBMIT</button>
               </div>
               {
                 SuggestionsStatus.status === 1 ? (
-                    <span className='bg-red-500 text-red-100 p-1 rounded-lg'>{SuggestionsStatus.message}</span>
+                  <span className='bg-red-500 text-red-100 p-1 rounded-lg'>{SuggestionsStatus.message}</span>
                 ) : null
               }
             </div>
@@ -102,7 +128,10 @@ function Contact() {
             const uri = encodeURI(preDefinedText);
             return (
               <div key={data._id}>
-                <div className='flex justify-center gap-10'>
+                <div className='ml-[20%]'>
+                  <p className='font-light text-lg'>Contact Links</p>
+                </div>
+                <div className='flex justify-center gap-10 sm:gap-2'>
                   <div className='h-[75px] w-[75px] rounded-full bg-white border-[7px] border-red-800 flex justify-center items-center'>
                     <a href={"https://www.linkedin.com/in/" + data.Linkedin}>
                       <img src={Linkedin} alt='' className='h-[50px] w-[50px] rounded-full'></img>
