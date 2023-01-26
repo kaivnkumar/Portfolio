@@ -27,7 +27,7 @@ function Home() {
       {
         ImageLoading === false && (
           <div>
-            <div className='flex bg-black'>
+            <div className='flex min-h-screen bg-black'>
               <div className='text-red-200 w-1/2 text-center'>
                 <div>
                   {
