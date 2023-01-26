@@ -35,7 +35,7 @@ function Navbar() {
               </Link>
               <Link className="relative group" to="/skills">
                 Skills
-                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>  
+                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>
               </Link>
               <Link className="relative group" to="/contact">
                 Contact
