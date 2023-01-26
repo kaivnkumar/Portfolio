@@ -12,10 +12,8 @@ import { GetContactInfo } from "../Controllers/GetContactInfo.js";
 import { Suggestions } from "../Controllers/PostSuggestion.js";
 import { CollegeData } from "../Controllers/PostCollegeInfo.js";
 import { GetCollegeData } from "../Controllers/GetCollegeInfo.js";
-import { ProgLangs } from "../Controllers/PostProgLang.js";
-import { GetProgLang } from "../Controllers/GetProgLang.js";
-import { DevSkills } from "../Controllers/PostDevSkills.js";
-import { GetDevSkills } from "../Controllers/GetDevSkills.js";
+import { Skills } from "../Controllers/PostSkills.js";
+import { GetSkills } from "../Controllers/GetSkills.js";
 import { Projects } from "../Controllers/PostProjects.js";
 import { GetProjects } from "../Controllers/GetProjects.js";
 
@@ -63,10 +61,8 @@ Route.get("/getcontactinfo", GetContactInfo);
 Route.post("/postsuggestion", Suggestions);
 Route.post("/postcollegeinfo", CollegeData);
 Route.get("/collegeinfo", GetCollegeData);
-Route.post("/postlanguage", ProgLangs);
-Route.get("/getlanguages", GetProgLang);
-Route.post("/postdevskill", DevSkills);
-Route.get("/getdevskill", GetDevSkills);
+Route.post("/postskill", Skills);
+Route.get("/getskill", GetSkills);
 Route.post("/postprojects", Projects);
 Route.get("/getprojects", GetProjects);
 

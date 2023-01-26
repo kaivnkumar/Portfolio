@@ -8,7 +8,7 @@ function DisplayMarksheet() {
   });
 
   return (
-    <div className='bg-sky-50 pt-[90px] min-h-screen'>
+    <div className='bg-black pt-[90px] min-h-screen'>
       {
         Marksheet?.length > 0 && Marksheet.map((obj) => {
           const base64String = btoa(

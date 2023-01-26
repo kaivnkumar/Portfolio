@@ -9,19 +9,19 @@ const CollegeInfoReducer = createSlice({
   name: "CollegeData",
   initialState: {
     Score: [],
-    dataLoading: true,
+    datasLoading: true,
   },
   reducers: {},
   extraReducers: {
     [getCollegeInfo.pending]: (state, action) => {
-      state.dataLoading = true;
+      state.datasLoading = true;
     },
     [getCollegeInfo.fulfilled]: (state, action) => {
       state.CollegeData = action.payload.data.data;
-      state.dataLoading = false;
+      state.datasLoading = false;
     },
     [getCollegeInfo.rejected]: (state, action) => {
-      state.dataLoading = false;
+      state.datasLoading = false;
     },
   },
 });
