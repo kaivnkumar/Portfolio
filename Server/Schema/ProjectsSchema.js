@@ -10,9 +10,13 @@ const ProjectSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        Link: {
+        GitLink: {
             type: String,
             required: true,
+        },
+        ProjectPic: {
+            data: Buffer,
+            contentType: String
         },
     },
     { timestamps: true }

@@ -19,24 +19,25 @@ import { GetProjects } from "../Controllers/GetProjects.js";
 
 const Route = express.Router();
 
-const Storages = multer.diskStorage({
+const profile = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "profile");
+        cb(null, "Image");
     },
     filename: (req, file, cb) => {
         cb(null, file.originalname);
     },
 });
 const Upload = multer({
-    storage: Storages,
+    storage: profile,
     limits: {
         fileSize: 90000000,
     },
 });
 
+
 const CerStorages = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "profile");
+        cb(null, "Image");
     },
     filename: (req, file, cb) => {
         cb(null, file.originalname);
@@ -48,6 +49,23 @@ const MarksheetUpload = multer({
         fileSize: 90000000,
     },
 });
+
+
+const Project = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "Image");
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    },
+});
+const ProjectPic = multer({
+    storage: Project,
+    limits: {
+        fileSize: 90000000,
+    },
+});
+
 
 Route.post("/personaldetail", PersonalData);
 Route.get("/getpersonaldetail", GetPersonalData);
@@ -63,7 +81,7 @@ Route.post("/postcollegeinfo", CollegeData);
 Route.get("/collegeinfo", GetCollegeData);
 Route.post("/postskill", Skills);
 Route.get("/getskill", GetSkills);
-Route.post("/postprojects", Projects);
+Route.post("/postprojects", ProjectPic.single("ProjectImage"), Projects);
 Route.get("/getprojects", GetProjects);
 
 export default Route;
