@@ -8,7 +8,7 @@ export const PostSchoolInfo = async (req, res) => {
         MarksheetType: req.body.MarksheetType,
         Percentage: req.body.Percentage,
         Marksheet: {
-            data: fs.readFileSync("profile/" + req.file.filename),
+            data: fs.readFileSync("Image/" + req.file.filename),
             contentType: "image/png",
         },
         MarksheetId: Math.floor(1000 + Math.random() * 9000)

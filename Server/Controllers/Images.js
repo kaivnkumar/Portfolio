@@ -4,7 +4,7 @@ import fs from "fs";
 export const AddImages = async (req, res) => {
     const UploadingImage = new ImgSchema({
         profilePic: {
-            data: fs.readFileSync("profile/" + req.file.filename),
+            data: fs.readFileSync("Image/" + req.file.filename),
             contentType: "image/png",
         },
     });
