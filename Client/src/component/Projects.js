@@ -53,7 +53,21 @@ function Projects() {
             }
           </div>
         </div>
-
+        <div className='min-h-screen pr-12'>
+          <div className='h-full w-2 bg-slate-800 flex items-center justify-center rounded-lg'></div>
+        </div>
+        <div className='w-7/12 pr-7'>
+          <p className='text-xl font-bold flex justify-center pb-5'>GitHub</p>
+          <div className='group pb-3 flex w-52 hover:w-96'>
+            <a href='https://github.com/kavinkumars21/' className='text-base font-bold'>UserName : kavinkumars21</a>
+            <p className='px-2 text-sm hidden group-hover:inline-block bg-slate-200 text-gray-700'>Click to view profile</p>
+          </div>
+          <div className='grid gap-y-5'>
+            <img src="https://github-profile-trophy.vercel.app/?username=kavinkumars21" alt="kavinkumars21" />
+            <img align="center" src="https://github-readme-stats.vercel.app/api?username=kavinkumars21&show_icons=true&locale=en" alt="kavinkumars21" />
+            <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=kavinkumars21&" alt="kavinkumars21" />
+          </div>
+        </div>
       </div>
     </div>
   )
