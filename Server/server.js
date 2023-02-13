@@ -12,8 +12,8 @@ const app = Express();
 
 const PORT = process.env.PORT;
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
-// app.use(cors({ credentials: true, origin:"https://kavinkumar.vercel.app"}));
+// app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin:"https://kavinkumar.vercel.app"}));
 
 app.use(bodyParser.json());
 
@@ -29,7 +29,7 @@ mongoose.connect(
   },
   (err) => {
     if (!err) {
-      console.log("Database Connected");
+      console.log("Database Connected Successfully");
     } else {
       console.log("error", err);
     }
@@ -37,5 +37,5 @@ mongoose.connect(
 );
 
 app.listen(PORT, () => {
-  console.log(`server listening at port ${PORT}`);
+  console.log(`Server listening at port ${PORT}`);
 });
