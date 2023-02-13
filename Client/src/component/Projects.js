@@ -13,18 +13,48 @@ function Projects() {
   const { Projects } = useSelector((state) => state.ProjectInfo);
 
   return (
-    <div className='bg-black text-red-200 min-h-screen pt-[90px]'>
-      {
-        Projects?.length > 0 && Projects.map((data) => (
-          <div key={data._id}>
-            <p>Project Title : </p>
-            <p>{data.Title}</p>
-            <p>Description : </p>
-            <p>{data.Description}</p>
-            <a href={data.Link}>View Project</a>
+    <div className='bg-black text-red-200 min-h-screen pt-[90px] pl-14 pb-10'>
+      <div className='flex'>
+        <div>
+          <p className='text-xl font-bold flex justify-center pb-5'>Projects</p>
+          <div className='flex flex-wrap gap-x-20 gap-y-10 grid-cols-2'>
+            {
+              Projects?.length > 0 && Projects.map((data) => {
+                const base64String = btoa(
+                  new Uint8Array(data?.ProjectPic?.data?.data)
+                    .reduce((data, byte) => data + String.fromCharCode(byte), '')
+                )
+                return (
+                  <div key={data._id}>
+                    <div className='w-[400px]'>
+                      <div className="group rounded-md bg-white w-full flex justify-center items-center bg-gradient-to-r from-gray-900 to-gray-700">
+                        <div>
+                          <div className="w-[400px] h-[260px] rounded-t-md" >
+                            <img src={`data:image/png;base64,${base64String}`} className='h-full w-full group-hover:opacity-25 rounded-t-md'></img>
+                          </div>
+                          <div className="py-8 px-4 bg-white h-[150px] w-full rounded-b-md fd-cl group-hover:opacity-25">
+                            <span className="block text-lg text-gray-800 font-bold tracking-wide">{data.Title}</span>
+                            <span className="block text-gray-600 text-sm">{data.Description}</span>
+                          </div>
+                        </div>
+                        <div className="absolute opacity-0 fd-sh group-hover:opacity-100">
+                          <div className="pt-8 text-center">
+                            <button className="text-center rounded-lg p-4 bg-white text-gray-700 font-bold text-lg"><a href={data.GitLink}>View Project</a></button>
+                          </div>
+                          <div className="pt-8 text-center">
+                            <button className="text-center rounded-lg p-4 bg-white text-gray-700 font-bold text-lg"><a href={data.GitLink}>View Github</a></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
           </div>
-        ))
-      }
+        </div>
+
+      </div>
     </div>
   )
 }
