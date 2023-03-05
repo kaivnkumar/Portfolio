@@ -32,14 +32,14 @@ function Home() {
                 <div>
                   {
                     personalData?.length > 0 && personalData.map((data) => (
-                      <div className='mt-[30%]' key={data._id}>
-                        <p className='decoration-orange-900n font-semibold font-marker text-5xl italic p-8'>MERN STACK DEVELOPER</p>
-                        <p className='text-2xl font-bold'>{data.FirstName} {data.LastName}</p>
+                      <div className='mt-[30%] sm:mt-[70%]' key={data._id}>
+                        <p className='decoration-orange-900n font-semibold font-marker text-5xl italic p-8 sm:text-xl sm:p-2 sm:mb-5'>MERN STACK DEVELOPER</p>
+                        <p className='text-2xl font-bold sm:text-sm'>{data.FirstName} {data.LastName}</p>
                       </div>
                     ))
                   }
                 </div>
-                <div className='mt-[20px]'>
+                <div className='mt-[20px] sm:mt-[5px]'>
                   <Link to="/about">
                     <button className='text-gray-500'>About Me</button>
                   </Link>
@@ -55,7 +55,7 @@ function Home() {
                     return (
                       <div key={img._id} className='flex justify-center'>
                         <img
-                          className='w-[510px] h-[600px]'
+                          className='w-[510px] h-[600px] sm:w-[260px] sm:h-[300px] sm:mt-[20%]'
                           src={`data:image/png;base64,${base64String}`}
                           alt="">
                         </img>

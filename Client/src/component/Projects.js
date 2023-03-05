@@ -56,7 +56,7 @@ function Projects() {
         <div className='min-h-screen pr-12 sm:hidden'>
           <div className='h-full w-2 bg-slate-800 flex items-center justify-center rounded-lg'></div>
         </div>
-        <div className='w-7/12 pr-7 sm:w-full'>
+        <div className='w-7/12 pr-7 sm:pr-5 sm:pl-5 sm:w-full'>
           <p className='text-xl font-bold flex justify-center pb-5'>GitHub</p>
           <div className='group pb-3 flex w-52 hover:w-96'>
             <a href='https://github.com/kavinkumars21/' className='text-base font-bold sm:font-thin'>UserName : kavinkumars21</a>
