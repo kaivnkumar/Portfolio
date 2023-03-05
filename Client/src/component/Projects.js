@@ -14,7 +14,7 @@ function Projects() {
 
   return (
     <div className='bg-black text-red-200 min-h-screen pt-[90px] pl-14 pb-10'>
-      <div className='flex'>
+      <div className='flex sm:flex-col'>
         <div>
           <p className='text-xl font-bold flex justify-center pb-5'>Projects</p>
           <div className='flex flex-wrap gap-x-20 gap-y-10 grid-cols-2'>
@@ -63,9 +63,11 @@ function Projects() {
             <p className='px-2 text-sm hidden group-hover:inline-block bg-slate-200 text-gray-700'>Click to view profile</p>
           </div>
           <div className='grid gap-y-5'>
-            <img src="https://github-profile-trophy.vercel.app/?username=kavinkumars21" alt="kavinkumars21" />
-            <img align="center" src="https://github-readme-stats.vercel.app/api?username=kavinkumars21&show_icons=true&locale=en" alt="kavinkumars21" />
-            <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=kavinkumars21&" alt="kavinkumars21" />
+            <img src="https://github-profile-trophy.vercel.app/?username=kavinkumars21&theme=radical&no-frame=false&no-bg=false&margin-w=4" alt="kavinkumars21" />
+            <img src="https://github-readme-stats.vercel.app/api?username=kavinkumars21&theme=blue-green&hide_border=false&include_all_commits=false&count_private=false" alt="kavinkumars21" />
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=kavinkumars21&theme=blue-green&hide_border=false" alt="kavinkumars21" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kavinkumars21&theme=blue-green&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="kavinkumars21"/>
+            <img src="https://github-readme-activity-graph.cyclic.app/graph?username=kavinkumars21&bg_color=040f0f&color=22c55e&line=ec4899&point=22c55e&area_color=22272e&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" alt="kavinkumars21" />
           </div>
         </div>
       </div>
