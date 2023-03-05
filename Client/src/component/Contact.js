@@ -128,10 +128,10 @@ function Contact() {
             const uri = encodeURI(preDefinedText);
             return (
               <div key={data._id}>
-                <div className='ml-[20%]'>
+                <div className='ml-[20%] mb-5 sm:ml-[10%] sm:mb-5'>
                   <p className='font-light text-lg'>Contact Links</p>
                 </div>
-                <div className='flex justify-center gap-10 sm:gap-2'>
+                <div className='flex justify-center gap-10 sm:gap-1'>
                   <div className='h-[75px] w-[75px] rounded-full bg-white border-[7px] border-red-800 flex justify-center items-center'>
                     <a href={"https://www.linkedin.com/in/" + data.Linkedin}>
                       <img src={Linkedin} alt='' className='h-[50px] w-[50px] rounded-full'></img>
