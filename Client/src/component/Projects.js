@@ -13,11 +13,11 @@ function Projects() {
   const { Projects } = useSelector((state) => state.ProjectInfo);
 
   return (
-    <div className='bg-black text-red-200 min-h-screen pt-[90px] pl-14 pb-10 sm:pl-7'>
+    <div className='bg-black text-red-200 min-h-screen pt-[90px] pb-10'>
       <div className='flex sm:flex-col'>
         <div>
           <p className='text-xl font-bold flex justify-center pb-5'>Projects</p>
-          <div className='flex flex-wrap gap-x-20 gap-y-10 grid-cols-2'>
+          <div className='flex flex-wrap gap-x-20 gap-y-10 grid-cols-2 justify-center'>
             {
               Projects?.length > 0 && Projects.map((data) => {
                 const base64String = btoa(
@@ -26,10 +26,10 @@ function Projects() {
                 )
                 return (
                   <div key={data._id}>
-                    <div className='w-[400px] sm:w-[350px]'>
+                    <div className='w-[400px] sm:w-[320px]'>
                       <div className="group rounded-md bg-white w-full flex justify-center items-center bg-gradient-to-r from-gray-900 to-gray-700">
                         <div>
-                          <div className="w-[400px] h-[260px] rounded-t-md sm:w-[350px]" >
+                          <div className="w-[400px] h-[260px] rounded-t-md sm:w-[320px] sm:h-[200px]">
                             <img src={`data:image/png;base64,${base64String}`} className='h-full w-full group-hover:opacity-25 rounded-t-md'></img>
                           </div>
                           <div className="py-8 px-4 bg-white h-[150px] w-full rounded-b-md fd-cl group-hover:opacity-25">
