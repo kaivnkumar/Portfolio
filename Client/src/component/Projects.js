@@ -13,7 +13,7 @@ function Projects() {
   const { Projects } = useSelector((state) => state.ProjectInfo);
 
   return (
-    <div className='bg-black text-red-200 min-h-screen pt-[90px] pl-14 pb-10'>
+    <div className='bg-black text-red-200 min-h-screen pt-[90px] pl-14 pb-10 sm:pl-7'>
       <div className='flex sm:flex-col'>
         <div>
           <p className='text-xl font-bold flex justify-center pb-5'>Projects</p>
@@ -26,10 +26,10 @@ function Projects() {
                 )
                 return (
                   <div key={data._id}>
-                    <div className='w-[400px]'>
+                    <div className='w-[400px] sm:w-[350px]'>
                       <div className="group rounded-md bg-white w-full flex justify-center items-center bg-gradient-to-r from-gray-900 to-gray-700">
                         <div>
-                          <div className="w-[400px] h-[260px] rounded-t-md" >
+                          <div className="w-[400px] h-[260px] rounded-t-md sm:w-[350px]" >
                             <img src={`data:image/png;base64,${base64String}`} className='h-full w-full group-hover:opacity-25 rounded-t-md'></img>
                           </div>
                           <div className="py-8 px-4 bg-white h-[150px] w-full rounded-b-md fd-cl group-hover:opacity-25">
@@ -53,13 +53,13 @@ function Projects() {
             }
           </div>
         </div>
-        <div className='min-h-screen pr-12'>
+        <div className='min-h-screen pr-12 sm:hidden'>
           <div className='h-full w-2 bg-slate-800 flex items-center justify-center rounded-lg'></div>
         </div>
-        <div className='w-7/12 pr-7'>
+        <div className='w-7/12 pr-7 sm:w-full'>
           <p className='text-xl font-bold flex justify-center pb-5'>GitHub</p>
           <div className='group pb-3 flex w-52 hover:w-96'>
-            <a href='https://github.com/kavinkumars21/' className='text-base font-bold'>UserName : kavinkumars21</a>
+            <a href='https://github.com/kavinkumars21/' className='text-base font-bold sm:font-thin'>UserName : kavinkumars21</a>
             <p className='px-2 text-sm hidden group-hover:inline-block bg-slate-200 text-gray-700'>Click to view profile</p>
           </div>
           <div className='grid gap-y-5'>
