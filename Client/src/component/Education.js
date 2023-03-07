@@ -39,7 +39,7 @@ function Education() {
         <div>
           {
             dataLoading && <div>
-              <img className='h-[125px] w-[200px]' src={loader}></img>
+              <img className='h-[125px] w-[200px]' src={loader} alt="Loading..."></img>
             </div>
           }
           {
@@ -64,7 +64,7 @@ function Education() {
         <div>
           {
             datasLoading && <div>
-              <img className='h-[125px] w-[200px]' src={loader}></img>
+              <img className='h-[125px] w-[200px]' src={loader} alt="Loading..."></img>
             </div>
           }
           {
@@ -97,6 +97,23 @@ function Education() {
           }
         </div>
       </div>
+      <div class="mx-auto p-10 md:py-20 px-0 md:p-20 md:px-0 antialiased">
+        <div class="grid lg:grid-cols-2 2xl:grid-cols-3 grid-cols-1 gap-40 ">
+            <div class="mx-auto w-[500px] shadow-xl bg-cover bg-center h-[300px] transform duration-500 hover:-translate-y-2 cursor-pointer group" 
+            style={{'background-image': 'url(https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg)'}}>
+                <div class="bg-black bg-opacity-20 h-[300px] px-10 flex flex-wrap flex-col pt-32 hover:bg-opacity-75 transform duration-300">
+                    <h1 class="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+                        On A Day Like Today
+                    </h1>
+                    <div class="w-16 h-2 bg-yellow-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+                    </div>
+                    <p class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, beatae!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
   )
 }

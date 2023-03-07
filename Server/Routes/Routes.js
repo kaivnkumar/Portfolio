@@ -16,6 +16,7 @@ import { Skills } from "../Controllers/PostSkills.js";
 import { GetSkills } from "../Controllers/GetSkills.js";
 import { Projects } from "../Controllers/PostProjects.js";
 import { GetProjects } from "../Controllers/GetProjects.js";
+import { PostCertificate } from "../Controllers/PostCertificate.js";
 
 const Route = express.Router();
 
@@ -67,6 +68,22 @@ const ProjectPic = multer({
 });
 
 
+const Certificate = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "Image");
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    },
+});
+const CertificateImage = multer({
+    storage: Project,
+    limits: {
+        fileSize: 90000000,
+    },
+});
+
+
 Route.post("/personaldetail", PersonalData);
 Route.get("/getpersonaldetail", GetPersonalData);
 Route.post("/uploadimage", Upload.single("images"), AddImages);
@@ -83,5 +100,6 @@ Route.post("/postskill", Skills);
 Route.get("/getskill", GetSkills);
 Route.post("/postprojects", ProjectPic.single("ProjectImage"), Projects);
 Route.get("/getprojects", GetProjects);
+Route.post("/postcertificate", CertificateImage.single("Certificate"), PostCertificate);
 
 export default Route;
