@@ -118,13 +118,13 @@ function Education() {
                 <div>
                   <div className="mx-auto antialiased">
                     <div>
-                      <div className="mx-auto w-[500px] shadow-xl bg-cover bg-center h-[300px] transform duration-500 hover:-translate-y-2 cursor-pointer group"
+                      <div className="mx-auto w-[500px] sm:w-[340px] shadow-xl bg-cover bg-center h-[300px] transform duration-500 hover:-translate-y-2 cursor-pointer group"
                         style={{ backgroundImage: `url(${ImageURL})` }}>
-                        <div className="bg-black bg-opacity-20 h-[300px] px-10 flex flex-wrap flex-col pt-16 hover:bg-opacity-75 transform duration-300">
-                          <h1 className="text-white text-3xl mb-5 transform translate-y-32 group-hover:translate-y-0 duration-300">
+                        <div className="bg-black bg-opacity-20 h-[300px] px-10 sm:px-5 flex flex-wrap flex-col pt-16 sm:pt-6 hover:bg-opacity-75 transform duration-300">
+                          <h1 className="text-white text-3xl mb-5 transform translate-y-32 sm:translate-y-44 group-hover:translate-y-0 duration-300">
                             {obj.Title}
                           </h1>
-                          <div className="w-16 h-2 bg-yellow-500 rounded-full mb-5 transform translate-y-32 group-hover:translate-y-0 duration-300">
+                          <div className="w-16 h-2 bg-yellow-500 rounded-full mb-5 transform translate-y-32 sm:translate-y-44 group-hover:translate-y-0 duration-300">
                           </div>
                           <div className='opacity-0 group-hover:opacity-80 transform duration-500'>
                             <p className="text-white text-xl mb-4">
