@@ -17,6 +17,7 @@ import { GetSkills } from "../Controllers/GetSkills.js";
 import { Projects } from "../Controllers/PostProjects.js";
 import { GetProjects } from "../Controllers/GetProjects.js";
 import { PostCertificate } from "../Controllers/PostCertificate.js";
+import { GetCertificate } from "../Controllers/GetCertificate.js";
 
 const Route = express.Router();
 
@@ -101,5 +102,6 @@ Route.get("/getskill", GetSkills);
 Route.post("/postprojects", ProjectPic.single("ProjectImage"), Projects);
 Route.get("/getprojects", GetProjects);
 Route.post("/postcertificate", CertificateImage.single("Certificate"), PostCertificate);
+Route.get("/getcertificate", GetCertificate);
 
 export default Route;
