@@ -8,6 +8,7 @@ import suggestionReducer from "./Slice/postSuggestions";
 import CollegeInfoReducer from "./Slice/getCollegeInfo";
 import SkillReducers from "./Slice/getSkills";
 import ProjectsReducers from "./Slice/getProjects";
+import CertificateReducer from "./Slice/getCertificate";
 
 const rootReducer = combineReducers({
   personalInfo: infoReducer,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   suggestionsData: suggestionReducer,
   CollegeInfo: CollegeInfoReducer,
   TechnicalSkill: SkillReducers,
-  ProjectInfo: ProjectsReducers
+  ProjectInfo: ProjectsReducers,
+  CertificateInfo: CertificateReducer
 });
 
 const store = configureStore({

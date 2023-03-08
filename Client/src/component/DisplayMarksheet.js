@@ -20,7 +20,7 @@ function DisplayMarksheet() {
               <img
                 className='w-[550px] h-[800px]'
                 src={`data:image/png;base64,${base64String}`}
-                alt="">
+                alt="Marksheet">
               </img>
             </div>
           );
