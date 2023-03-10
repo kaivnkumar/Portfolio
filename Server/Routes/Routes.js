@@ -107,6 +107,6 @@ Route.get("/getprojects", GetProjects);
 Route.post("/postcertificate", CertificateImage.single("Certificate"), PostCertificate);
 Route.get("/getcertificate", GetCertificate);
 Route.post("/admin", PostAdminData);
-Route.get("/validate", Validate);
+Route.post("/validate", Validate);
 
 export default Route;

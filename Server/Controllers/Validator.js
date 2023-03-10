@@ -1,8 +1,10 @@
 import { AdminModel } from "../Schema/AdminSchema.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import Cookies from 'universal-cookie';
 
 export const Validate = async (req, res) => {
+  const cookies = new Cookies();
   const Password = req.body.Password;
   const data = await AdminModel.findOne({ User: "admin" });
 
@@ -10,9 +12,8 @@ export const Validate = async (req, res) => {
     const validatePassword = await bcrypt.compare(Password, data.Password);
     if (validatePassword) {
       const token = await tokenGeneratore("admin");
-      res.cookie("jwt", token);
+      res.cookie("jwt", token,{httpOnly:true});
       return res.send({
-        token: token,
         status: 200,
         message: "Success",
       });
