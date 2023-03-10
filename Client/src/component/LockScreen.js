@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react'
+import { useDispatch } from "react-redux";
 import { validation } from '../Store/Slice/validation';
 
 function LockScreen() {
 
     const dispatch = useDispatch();
-
-    const { validate } = useSelector((state) => state.ValidateInfo);
-
-    console.log(validate?.data?.token);
-
-    useEffect(() => {
-      console.log(validate?.data);
-    }, [validate]);
 
     const handleSuggestions = (e) => {
         e.preventDefault();
