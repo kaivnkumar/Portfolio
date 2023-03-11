@@ -6,7 +6,8 @@ const ProtectedRoutes = () => {
     const cookies = new Cookies();
 
     const token = cookies.get('jwt');
-    console.log(token);
+    console.log(cookies.get('jwt'),"hvdrsgdfg");
+
     return(
         token ? <Outlet/> : <Navigate to="/lock"/>
     )
