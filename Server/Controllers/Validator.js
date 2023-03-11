@@ -12,7 +12,7 @@ export const Validate = async (req, res) => {
     const validatePassword = await bcrypt.compare(Password, data.Password);
     if (validatePassword) {
       const token = await tokenGeneratore("admin");
-      res.cookie("jwt", token,{httpOnly:true});
+      res.cookie("jwt", token,{ expires: new Date(Date.now() + 300000) }, { httpOnly: false });
       return res.send({
         status: 200,
         message: "Success",
@@ -30,7 +30,7 @@ export const tokenGeneratore = (User) => {
   const token = jwt.sign(
     { User },
     process.env.JWT_KEY,
-    { expiresIn: "10minutes" }
+    { expiresIn: "5m" }
   )
   return token;
 }

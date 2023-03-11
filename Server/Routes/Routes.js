@@ -105,7 +105,7 @@ Route.get("/getskill", GetSkills);
 Route.post("/postprojects", ProjectPic.single("ProjectImage"), Projects);
 Route.get("/getprojects", GetProjects);
 Route.post("/postcertificate", CertificateImage.single("Certificate"), PostCertificate);
-Route.get("/getcertificate", GetCertificate);
+Route.get("/getcertificate",verify, GetCertificate);
 Route.post("/admin", PostAdminData);
 Route.post("/validate", Validate);
 

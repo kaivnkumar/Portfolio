@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 const AdminSchema = new mongoose.Schema(
   {
     User: {
-        type: String,
-        required: true,
-      },
+      type: String,
+      required: true,
+    },
     Password: {
       type: String,
       required: true,
