@@ -9,6 +9,9 @@ import Skills from "./component/Skills";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import DisplayMarksheet from "./component/DisplayMarksheet";
+import LockScreen from "./component/LockScreen";
+import ProtectedRoutes from "./component/ProtectedRoute";
+import ViewSuggestion from "./component/ViewSuggestion";
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
         <Route path="/skills" element={<Skills />} exact></Route>
         <Route path="/contact" element={<Contact />} exact></Route>
         <Route path="/education/marksheet" element={<DisplayMarksheet />} exact></Route>
+        <Route path="/lock" element={<LockScreen />} exact></Route>
+        <Route element={<ProtectedRoutes />}>
+          <Route element={<ViewSuggestion/>} path="/view" exact/>
+        </Route>
       </Routes>
       <Footer />
     </div>
