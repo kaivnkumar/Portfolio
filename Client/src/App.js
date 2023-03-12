@@ -26,7 +26,6 @@ function App() {
         <Route path="/contact" element={<Contact />} exact></Route>
         <Route path="/education/marksheet" element={<DisplayMarksheet />} exact></Route>
         <Route path="/lock" element={<LockScreen />} exact></Route>
-        <Route element={<ViewSuggestion/>} path="/view" exact/>
         <Route element={<ProtectedRoutes />}>
           <Route element={<ViewSuggestion/>} path="/view" exact/>
         </Route>

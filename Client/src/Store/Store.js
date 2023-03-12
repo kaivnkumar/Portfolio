@@ -10,6 +10,7 @@ import SkillReducers from "./Slice/getSkills";
 import ProjectsReducers from "./Slice/getProjects";
 import CertificateReducer from "./Slice/getCertificate";
 import validationReducer from "./Slice/validation";
+import suggestionsReducer from "./Slice/getSuggestions";
 
 const rootReducer = combineReducers({
   personalInfo: infoReducer,
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   ProjectInfo: ProjectsReducers,
   CertificateInfo: CertificateReducer,
   ValidateInfo: validationReducer,
+  SuggestedInfo: suggestionsReducer
 });
 
 const store = configureStore({
