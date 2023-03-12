@@ -21,6 +21,7 @@ import { GetCertificate } from "../Controllers/GetCertificate.js";
 import { PostAdminData } from "../Controllers/PostAdminData.js";
 import { Validate } from "../Controllers/Validator.js";
 import { verify } from "../Controllers/Validator.js";
+import { GetSuggestions } from "../Controllers/GetSuggestion.js";
 
 const Route = express.Router();
 
@@ -108,5 +109,6 @@ Route.post("/postcertificate", CertificateImage.single("Certificate"), PostCerti
 Route.get("/getcertificate", GetCertificate);
 Route.post("/admin", PostAdminData);
 Route.post("/validate", Validate);
+Route.get("/getsuggestion", verify, GetSuggestions);
 
 export default Route;
