@@ -2,13 +2,13 @@ import React from 'react'
 
 function ViewSuggestion() {
   return (
-    <div className='pt-[90px] min-h-screen'>
-      <div className='ml-[10%] mb-5'>
-        <h1 className='text-2xl font-bold sm:text-lg sm:font-semibold'>View Suggestion</h1>
+    <div className='pt-[90px] min-h-screen bg-black'>
+      <div className='mb-10'>
+        <h1 className='text-2xl font-bold sm:text-lg sm:font-semibold text-white text-center'>Suggestions</h1>
       </div>
       <div className='w-full flex justify-center'>
         <div class="h-56 w-96 relative cursor-pointer mb-5 group overflow-hidden">
-          <div class="absolute inset-0 bg-red-200 rounded-lg shadow-2xl pt-5 pl-5">
+          <div class="absolute inset-0 bg-sky-200 rounded-lg shadow-2xl pt-5 pl-5">
             <h3 class="text-xl font-bold text-gray-900 sm:text-xl">Name</h3>
             <h3 class="text-base font-bold text-gray-900 sm:text-xl">Email</h3>
             <h3 class="text-base font-bold text-gray-900 sm:text-xl">Phone</h3>
@@ -27,7 +27,7 @@ function ViewSuggestion() {
             </div>
           </div>
           <div class="absolute inset-0 transform group-hover:-translate-x-96 transition duration-700">
-            <div class="h-full w-full bg-red-800 rounded-lg shadow-2xl flex justify-center items-center">
+            <div class="h-full w-full bg-slate-500 rounded-lg shadow-2xl flex justify-center items-center">
               <h3 class="text-xl font-bold text-gray-900 sm:text-xl">Name</h3>
             </div>
           </div>

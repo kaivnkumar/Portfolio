@@ -13,14 +13,16 @@ export const Validate = async (req, res) => {
     if (validatePassword) {
       const token = await tokenGeneratore("admin");
       res.cookie("jwt", token, { expires: new Date(Date.now() + 300000) }, { httpOnly: false });
-      return res.send({
+      res.send({
         status: 200,
-        message: "Success",
+        message: "Password Correct",
+        response: "success",
       });
     } else {
       return res.send({
         status: 404,
         message: "Incorrect",
+        response: "Incorrect",
       });
     }
   }
