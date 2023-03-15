@@ -7,7 +7,7 @@ function Navbar() {
     Navigate("/");
   };
   return (
-    <div className="h-16 w-full bg-black border-b border-gray-700 fixed overflow-hidden">
+    <div className="h-16 w-full bg-black border-b border-gray-700 fixed overflow-hidden z-50">
       <div className="justify-between items-center shadow-header_box h-[72px] flex pl-[80px] pr-[40px] md:pl-[36px] sm:h-[36px] sm:pl-[12px] sm:pr-[10px]">
         <div className="flex items-center justify-center sm:pt-[4px]">
           <div

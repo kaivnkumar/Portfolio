@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { axio } from "../../Config/Config.js";
 
 export const getSuggestions = createAsyncThunk("Suggestions", async () => {
-    return axio.get(`/api/getsuggestion`, { withCredentials: true });
+    return axio.get(`/api/getsuggestion`, { withCredentials: true },{sameSite: "none"});
 });
 
 const suggestionsReducer = createSlice({
