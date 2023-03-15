@@ -11,7 +11,6 @@ function Skills() {
   }, []);
 
   const { SkillsInfo } = useSelector((state) => state.TechnicalSkill);
-  console.log(SkillsInfo[0]);
 
   return (
     <div className='bg-black text-red-200 min-h-screen pt-[90px] pb-10'>
