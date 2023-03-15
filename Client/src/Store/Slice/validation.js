@@ -2,7 +2,10 @@ import { axio } from "../../Config/Config";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const validation = createAsyncThunk("password", async (data) => {
-    return axio.post(`/api/validate`, data, { withCredentials: true });
+    return axio.post(`/api/validate`, data, credentials, {
+        withCredentials: true,
+        credentials: 'include',
+      });
 });
 
 export const validationReducer = createSlice({
