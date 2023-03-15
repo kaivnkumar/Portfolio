@@ -14,8 +14,8 @@ export const Validate = async (req, res) => {
       const token = await tokenGeneratore("admin");
       res.cookie("jwt", token,
         {expires: new Date(Date.now() + 300000) },
-        {secure: true},
-        {httpOnly: true},
+        {secure: false},
+        {httpOnly: false},
         {sameSite: 'Lax'},
         {path: '/'},
         {domain: '.vercel.app'}
