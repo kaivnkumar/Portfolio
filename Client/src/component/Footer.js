@@ -10,7 +10,7 @@ function Footer() {
             <p className="w-[194px] text-[20px] font-bold pb-[10px] sm:text-[16px] sm:pb-[7px]">
               Portfolio
             </p>
-            <Link to='/lock'>Maintenance</Link>
+            <Link to='/lock'>Maintain</Link>
           </div>
           <div className=" flex justify-between items-center pt-[5px] text-[16px] font-semibold sm:text-[13px]">
             <div className=" flex gap-[28px] sm:gap-[12px]">
