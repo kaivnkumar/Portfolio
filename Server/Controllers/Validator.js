@@ -17,8 +17,7 @@ export const Validate = async (req, res) => {
         {secure: true},
         {httpOnly: true},
         {sameSite: 'none'},
-        {path: '/'},
-        {domain: '.vercel.app'}
+        {path: '/'}
         );
       res.send({
         status: 200,
