@@ -8,7 +8,7 @@ function ViewSuggestion() {
 
   useEffect(() => {
     dispatch(getSuggestions());
-  }, []);
+  }, [dispatch]);
 
   const { SuggestionsData } = useSelector((state) => state.SuggestedInfo);
 
