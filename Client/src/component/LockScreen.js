@@ -12,7 +12,7 @@ function LockScreen() {
 
     useEffect(() => {
         if (Password?.data?.response == "success") {
-            Navigate("/view");
+            alert("Success");
         }
         else if (Password?.data?.response == "Incorrect") {
             setValidationStatus({
