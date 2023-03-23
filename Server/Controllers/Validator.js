@@ -16,9 +16,9 @@ export const Validate = async (req, res) => {
         {expires: new Date(Date.now() + 300000) },
         {secure: true},
         {httpOnly: true},
-        {SameSite: 'Lax'},
+        {sameSite: 'none'},
         {path: '/'},
-        {domain: '.vercel.app'}
+        // {domain: '.vercel.app'}
         );
       res.send({
         status: 200,
