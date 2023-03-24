@@ -13,6 +13,8 @@ const app = Express();
 
 const PORT = process.env.PORT;
 
+app.use(express.static('public'));
+
 // app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cors({ credentials: true, origin:"https://kavinkumar.vercel.app"}));
 
