@@ -18,7 +18,7 @@ export const Validate = async (req, res) => {
         httpOnly: true,
         sameSite: 'none',
         path: '/',
-        domain: '.onrender.com'
+        domain: '.vercel.app'
       });
       res.send({
         status: 200,
