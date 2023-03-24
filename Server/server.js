@@ -1,10 +1,11 @@
 import Express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import mongoose from "mongoose";  
+import mongoose from "mongoose";
 import * as dotenv from 'dotenv';
 import { mongoUrl } from "./Config/config.js";
 import routes from "./Routes/Routes.js";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -12,7 +13,20 @@ const app = Express();
 
 const PORT = process.env.PORT;
 
-app.use(cors({ credentials: true, origin:"http://localhost:3000"}));
+// app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin:"https://kavinkumar.vercel.app"}));
+
+app.use(function(req, res, next) {
+  res.header('Content-Type', 'application/json;charset=UTF-8')
+  res.header('Access-Control-Allow-Credentials', true)
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  )
+  next()
+})
+
+app.use(cookieParser());
 
 app.use(bodyParser.json());
 
@@ -28,7 +42,7 @@ mongoose.connect(
   },
   (err) => {
     if (!err) {
-      console.log("Database Connected");
+      console.log("Database Connected Successfully");
     } else {
       console.log("error", err);
     }
@@ -36,5 +50,5 @@ mongoose.connect(
 );
 
 app.listen(PORT, () => {
-    console.log(`server listening at port ${PORT}`);
-  });
+  console.log(`Server listening at port ${PORT}`);
+});

@@ -2,7 +2,20 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    screens: {
+      
+      sm: { min: "320px", max: "479px" },
+
+    },
+    extend: {
+      fontFamily: {
+        marker: ['Permanent Marker'],
+      },
+      backgroundImage: {
+        background: "url('./component/Image/message.svg')",
+        homeBg: "url('./component/Image/web-developer.gif')",
+      },
+    },
   },
   plugins: [],
 }

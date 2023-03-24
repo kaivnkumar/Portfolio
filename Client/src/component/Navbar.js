@@ -7,25 +7,40 @@ function Navbar() {
     Navigate("/");
   };
   return (
-    <div className="bg-black h-16">
-      <div className="justify-between items-center h-[72px] shadow-header_box flex pl-[147px] md:pl-[36px] sm:h-[36px] sm:pl-[17px] ">
+    <div className="h-16 w-full bg-black border-b border-gray-700 fixed overflow-hidden z-50">
+      <div className="justify-between items-center shadow-header_box h-[72px] flex pl-[80px] pr-[40px] md:pl-[36px] sm:h-[36px] sm:pl-[12px] sm:pr-[10px]">
         <div className="flex items-center justify-center sm:pt-[4px]">
           <div
             onClick={handelHomePage}
-            className="flex gap-2 cursor-pointer font-bold text-[24.69px] mt-4 md:text-[20px] sm:text-[12px] sm:gap-1">
-            <p className=" text-[#bebabd]">Kavin 's</p>
-            <p className=" text-[#747485]">Intro</p>
+            className="flex gap-2 cursor-pointer font-bold text-[24px] mt-4 md:text-[20px] sm:text-[13px] sm:gap-[1px]">
+            <p className=" text-[#8f898c]">Kavin 's</p>
+            <p className=" text-[#986c6c]">Intro</p>
           </div>
         </div>
-        <div className="flex sm:gap-[10px]">
-          <div className="pt-[43px] pb-[22px] text-[16px] text-[#adadbb] md:pr-[30px] md:text-[14px] sm:text-[10px]">
-            <ul className="flex gap-[30px] md:gap-[27px] sm:gap-[20px]">
-              <Link to="/about">About</Link>
-              <Link to="/education">Education</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/skills">Skills</Link>
-              <Link to="/add-info">Additional Info</Link>
-              <Link to="/contact">Contact</Link>
+        <div>
+          <div className="pt-[43px] pb-[22px] text-[18px] text-blue-50 font-bold md:pr-[30px] md:text-[14px] 
+          sm:text-[12px] sm:font-semibold">
+            <ul className="flex gap-[30px] md:gap-[27px] sm:gap-[8px]">
+              <Link className="relative group" to="/about">
+                About
+                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+              </Link>
+              <Link className="relative group" to="/education">
+                Education
+                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+              </Link>
+              <Link className="relative group" to="/projects">
+                Projects
+                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+              </Link>
+              <Link className="relative group" to="/skills">
+                Skills
+                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+              </Link>
+              <Link className="relative group" to="/contact">
+                Contact
+                <div className="absolute w-full h-[2px] rounded-2xl bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></div>
+              </Link>
             </ul>
           </div>
         </div>
