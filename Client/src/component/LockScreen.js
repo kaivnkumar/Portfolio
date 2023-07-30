@@ -15,7 +15,8 @@ function LockScreen() {
 
     useEffect(() => {
         if (Password?.data?.response == "success") {
-            cookies.set("jwt",Password?.data?.token);
+            cookies.set("jwt",Password?.data?.token,
+            {expires: new Date(Date.now() + 300000)});
             Navigate("/view");
         }
         else if (Password?.data?.response == "Incorrect") {

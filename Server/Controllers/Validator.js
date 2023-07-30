@@ -1,10 +1,11 @@
 import { AdminModel } from "../Schema/AdminSchema.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import Cookies from 'universal-cookie';
+// import Cookies from 'universal-cookie';
+// import cookieParser from "cookie-parser";
 
 export const Validate = async (req, res) => {
-  const cookies = new Cookies();
+  // const cookies = new Cookies();
   const Password = req.body.Password;
   const data = await AdminModel.findOne({ User: "admin" });
 
@@ -52,7 +53,7 @@ export const tokenValidator = async (token) => {
 
 export const verify = async (req, res, next) => {
   try {
-    const { jwt } = req.cookies;
+    const jwt = req.cookies.jwt;
     const valid = await tokenValidator(jwt);
     if (valid) {
       next();
