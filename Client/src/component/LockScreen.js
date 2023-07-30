@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { validation } from '../Store/Slice/validation';
+import Cookies from 'universal-cookie';
 
 function LockScreen() {
 
@@ -10,9 +11,12 @@ function LockScreen() {
     const [ValidationStatus, setValidationStatus] = useState({ status: 0, message: "" });
     const Navigate = useNavigate();
 
+    const cookies = new Cookies();
+
     useEffect(() => {
         if (Password?.data?.response == "success") {
-            alert("Success");
+            cookies.set("jwt",Password?.data?.token);
+            Navigate("/view");
         }
         else if (Password?.data?.response == "Incorrect") {
             setValidationStatus({
