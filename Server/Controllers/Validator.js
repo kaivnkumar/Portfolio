@@ -49,7 +49,7 @@ export const tokenValidator = async (token) => {
 
 export const verify = async (req, res, next) => {
   try {
-    const { jwt } = req.cookies;
+    const { jwt } = req.cookie;
     const valid = await tokenValidator(jwt);
     if (valid) {
       next();
