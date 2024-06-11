@@ -16,6 +16,7 @@ export const Validate = async (req, res) => {
         secure: true,
         sameSite: 'None',
         path: '/',
+        domain: '.vercel.app',
       });
       res.send({
         status: 200,
