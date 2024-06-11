@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import * as dotenv from 'dotenv';
 import { mongoUrl } from "./Config/config.js";
 import routes from "./Routes/Routes.js";
+import cookieParser from 'cookie-parser';
 
 dotenv.config();
 
@@ -14,6 +15,8 @@ const PORT = process.env.PORT;
 
 // app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cors({ credentials: true, origin:"https://kavinkumar.vercel.app"}));
+
+app.use(cookieParser());
 
 app.use(function(req, res, next) {
   res.header('Content-Type', 'application/json;charset=UTF-8')
