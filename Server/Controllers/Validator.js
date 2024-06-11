@@ -1,11 +1,8 @@
 import { AdminModel } from "../Schema/AdminSchema.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-// import Cookies from 'universal-cookie';
-// import cookieParser from "cookie-parser";
 
 export const Validate = async (req, res) => {
-  // const cookies = new Cookies();
   const Password = req.body.Password;
   const data = await AdminModel.findOne({ User: "admin" });
 
