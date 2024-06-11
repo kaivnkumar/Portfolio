@@ -5,7 +5,6 @@ import mongoose from "mongoose";
 import * as dotenv from 'dotenv';
 import { mongoUrl } from "./Config/config.js";
 import routes from "./Routes/Routes.js";
-import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -25,8 +24,6 @@ app.use(function(req, res, next) {
   )
   next()
 })
-
-app.use(cookieParser());
 
 app.use(bodyParser.json());
 
