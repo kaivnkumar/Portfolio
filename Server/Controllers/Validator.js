@@ -13,14 +13,13 @@ export const Validate = async (req, res) => {
     const validatePassword = await bcrypt.compare(Password, data.Password);
     if (validatePassword) {
       const token = await tokenGeneratore("admin");
-      // res.cookie("jwt", token, {
-      //   expires: new Date(Date.now() + 300000),
-      //   secure: true,
-      //   httpOnly: true,
-      //   sameSite: 'none',
-      //   path: '/',
-      //   domain: '.vercel.app'
-      // });
+      res.cookie("jwt", token, {
+        httpOnly: true,
+        expires: new Date(Date.now() + 300000),
+        secure: true,
+        sameSite: 'None',
+        path: '/',
+      });
       res.send({
         status: 200,
         token,
@@ -53,7 +52,7 @@ export const tokenValidator = async (token) => {
 
 export const verify = async (req, res, next) => {
   try {
-    const jwt = req.cookies.jwt;
+    const { jwt } = req.cookies;
     const valid = await tokenValidator(jwt);
     if (valid) {
       next();

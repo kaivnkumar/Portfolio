@@ -5,7 +5,7 @@ export const axio = axios.create({
   headers: { 
   "X-Custom-Header": "foobar",
   "Accept": "application/json",
-  "Content-Type": undefined,
+  "Content-Type": 'application/json',
   "Access-Control-Allow-Origin": "*"
   },
 });
